@@ -47,6 +47,11 @@ export class Citas extends Entity {
   @belongsTo(() => Centros, {keyFrom: 'id_centro', keyTo: 'id'})
   centro: string;
 
+  @property({
+    type: 'string',
+  })
+  centrosId?: string;
+
   constructor(data?: Partial<Citas>) {
     super(data);
   }

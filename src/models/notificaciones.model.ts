@@ -37,6 +37,9 @@ export class Notificaciones extends Entity {
   @belongsTo(() => Usuarios, {keyFrom: 'id_usuario', keyTo: 'id'})
   usuario: string;
 
+  @belongsTo(() => Usuarios)
+  usuariosId: string;
+
   constructor(data?: Partial<Notificaciones>) {
     super(data);
   }
